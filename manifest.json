@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Offscreen Demo",
+  "version": "1.0",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; frame-ancestors 'none';"
+  },
+  "description": "Demo extension using offscreen permission",
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "permissions": [
+    "activeTab",
+    "offscreen",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ]
+}
+
